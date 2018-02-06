@@ -1,0 +1,105 @@
+﻿//SMOTH SCROLLING
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function (event) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 1000, function () {
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { 
+                      return false;
+                  } else {
+                      $target.attr('tabindex', '-1'); 
+                      $target.focus(); 
+                  };
+              });
+          }
+      }
+  });
+//
+//Nav bar scrolling in top
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 10) {
+            $('#home').addClass('shrink');
+        }
+        else {
+            $('#home').removeClass('shrink');
+        }
+    });
+});
+//
+(function () {
+    var originalValidationSummaryOnSubmit = window.ValidationSummaryOnSubmit;
+    window.ValidationSummaryOnSubmit = function (validationGroup) {
+        var originalScrollTo = window.scrollTo;
+        window.scrollTo = function () { };
+        originalValidationSummaryOnSubmit(validationGroup);
+        window.scrollTo = originalScrollTo;
+    }
+}());
+///
+$("#Button2").click(function () {
+    //function SendEmail() {
+    var Name = $("#name").val();
+    var Email = $("#exampleInputEmail").val();
+    var Sub = $("#subject").val();
+    var Text = $("#description").val();
+    if (Name == '')
+        document.getElementById("name").style.border = "1px solid red";
+    else
+        document.getElementById("name").style.border = "none";
+    if (Name == '')
+        document.getElementById("exampleInputEmail").style.border = "1px solid red";
+    else
+        document.getElementById("exampleInputEmail").style.border = "none";
+    if (Name == '')
+        document.getElementById("description").style.border = "1px solid red";
+    else
+        document.getElementById("description").style.border = "none";
+    if (Name == '')
+        document.getElementById("subject").style.border = "1px solid red";
+    else
+        document.getElementById("subject").style.border = "none";
+    if (typeof (Page_ClientValidate) == 'function') {
+        Page_ClientValidate();
+    }
+
+    if (Page_IsValid) {
+        $.ajax({
+            type: 'POST',
+            url: 'Index.aspx/ButtonClik',
+            data: "{ EmailName:'" + Name + "',EmailContact:'" + Email + "',EmailSub:'" + Sub + "',EmailText:'" + Text + "' }",
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (data) {
+                sendgood = 'Wiadomość została wysłana :)';
+                $('#name').val("");
+                $('#exampleInputEmail').val("");
+                $('#description').val("");
+                $('#subject').val("");
+                document.getElementById("error").style.display = 'none';
+                document.getElementById("success").style.display = '';
+                
+            }
+        });
+    }
+    else {
+       
+        document.getElementById("error").style.display = '';
+
+    }
+});
+
+

@@ -1,0 +1,71 @@
+﻿*{
+    font-family:Open Sans Condensed,Arial;
+}
+body, html {
+    height: 100%;
+}
+h1, h2, p, label{
+    color: lightgrey;
+   
+}
+table,thead, th, td{
+    color: lightgrey;
+    font-family:Open Sans Condensed,Arial;
+}
+.bg {
+    background-image: url('Images/Website-Design-Background.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      position: relative;
+      width:100%;
+}
+.bg2 {
+    background-image: url('Images/tło2.png');
+    height: 100%;
+      width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#home {
+  background: rgba(0,0,0,0.0); 
+  border: 0; 
+  border-radius: 0;
+  transition: all ease .5s;
+  display: block;
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+}
+#home.shrink {
+height: 60px;
+background-color: rgba(0,0,0,0.7);
+padding-top: 0px;
+}
+.container-fluid a{
+ color: whitesmoke;
+  }
+.footer {
+  background: #061D25;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
+.linki a:hover,.linki a:visited,.linki a:link,.linki a:active
+{
+    text-decoration:none;
+}
