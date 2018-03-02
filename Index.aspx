@@ -108,8 +108,7 @@
 
                         <div class="col-md-6">
                             <div class="center-block">
-                                   <div class="center-block" id="showup" style="background-color:#1d1e1f; height:286px;width:473px ;position:relative; border-radius: 25px;display:none;">
-                       
+                                   <div class="w-75 p-3 center-block" id="showup" style="background-color:#1d1e1f; height:286px;position:relative; border-radius: 25px;display:none;">
                                    </div>
                                 <table class="table"; id="table">
                                     <thead>
