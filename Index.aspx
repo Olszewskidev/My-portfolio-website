@@ -19,29 +19,31 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
+       <script src="Scripts/jquery-3.3.1.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="start"></div>
          <div class="bg">
-            
+
                 <nav class="navbar navbar-inverse navbar fixed-top" id="home">
-                  <%--     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" id="home">--%>
+            <%--           <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" id="home">--%>
                     <div class="container-fluid">
-                        <div class="navbar-header">
+                      <%--  <div class="navbar-header">
                             <a class="navbar-brand" href="#start">Kamil Olszewski</a>
-                        </div>
-                        <a class="navbar-brand" href="#about" style="font-size: 16px">O mnie</a>
-                        <a class="navbar-brand" href="#projects" style="font-size: 16px">Moje projekty</a>
-                        <a class="navbar-brand" href="#contact" style="font-size: 16px; ">Kontakt</a>   
+                        </div>--%>
+                        <a class="navbar-brand" href="#about" style="font-size: 14px">O mnie</a>
+                        <a class="navbar-brand" href="#projects" style="font-size: 14px">Moje projekty</a>
+                        <a class="navbar-brand" href="#contact" style="font-size: 14px; ">Kontakt</a>   
                     </div>
                 </nav>
      
-
-
-            <div style="padding-top:180px">
-                <img class="img-circle center-block" src="Images/img_20180107_142720.115.jpg" alt="thumb01" width="140" height="140" />
+           
+            
+            <div style="padding-top:120px">
+                <img class="img-circle center-block" src="Images/img_20180107_142720.115.jpg" alt="thumb01" width="140" height="140" />  
+             
+                  
             </div>
             <div>
                 <br />
@@ -56,9 +58,9 @@
                     <div class="container-fluid">
                         <div class="container text-center">
                             <p style="word-spacing: 10px;">
-                                <a href="https://play.google.com/store/apps/developer?id=Olszewski.Dev" target="_blank"><i class="fa fa-google" style="font-size: 36px"></i></a>
-                                <a href="https://github.com/Olszewskidev" target="_blank"><i class="fa fa-github" style="font-size: 36px"></i></a>
-                                <a href="https://www.youtube.com/channel/UC6VIjE7IuV31LFofGPcN7EQ/featured" target="_blank"><i class="fa fa-youtube-square" style="font-size: 36px"></i></a>
+                                <a href="https://play.google.com/store/apps/developer?id=Olszewski.Dev" target="_blank"><i class="fa fa-google" style="font-size: 36px; position:relative" id="gp1"></i></a>
+                                <a href="https://github.com/Olszewskidev" target="_blank"><i class="fa fa-github" style="font-size: 36px; position:relative"id="gt1"></i></a>
+                                <a href="https://www.youtube.com/channel/UC6VIjE7IuV31LFofGPcN7EQ/featured" target="_blank"><i class="fa fa-youtube-square" style="font-size: 36px; position:relative"id="yt1"></i></a>
                             </p>
                         </div>
                     </div>
@@ -94,9 +96,9 @@
                     <div class="container-fluid">
                         <div class="container text-center">
                             <p style="word-spacing: 10px;">
-                                <a href="https://play.google.com/store/apps/developer?id=Olszewski.Dev" target="_blank"><i class="fa fa-google" style="font-size: 36px"></i></a>
-                                <a href="https://github.com/Olszewskidev" target="_blank"><i class="fa fa-github" style="font-size: 36px"></i></a>
-                                <a href="https://www.youtube.com/channel/UC6VIjE7IuV31LFofGPcN7EQ/featured" target="_blank"><i class="fa fa-youtube-square" style="font-size: 36px"></i></a>
+                                <a href="https://play.google.com/store/apps/developer?id=Olszewski.Dev" target="_blank"><i class="fa fa-google" style="font-size: 36px" id="gp2"></i></a>
+                                <a href="https://github.com/Olszewskidev" target="_blank"><i class="fa fa-github" style="font-size: 36px" id="git2"></i></a>
+                                <a href="https://www.youtube.com/channel/UC6VIjE7IuV31LFofGPcN7EQ/featured" target="_blank"><i class="fa fa-youtube-square" style="font-size: 36px" id="yt2"></i></a>
                             </p>
                         </div>
                     </div>
@@ -106,7 +108,10 @@
 
                         <div class="col-md-6">
                             <div class="center-block">
-                                <table class="table">
+                                   <div class="center-block" id="showup" style="background-color:#1d1e1f; height:286px;width:473px ;position:relative; border-radius: 25px;display:none;">
+                       
+                                   </div>
+                                <table class="table"; id="table">
                                     <thead>
                                      
                                             <tr>
@@ -276,7 +281,7 @@
             <section class="contact">
                    <div style="padding-top:25px"></div>
                 <div class="contact-content" style="padding: 0 10px">
-                    <p style="color: lightgrey; text-align: center; text-align: justify; letter-spacing: 2px">Jeśli masz do mnie jakieś pytania, z miłą chęcią na nie odpowiem. Możesz się ze mną skontaktować drogą mailową, pisząć na adres: dev.olszewski@gmail.com bądź skorzystać z poniższego formularza kontaktowego (NIESTETY FORMULARZ AKTUALNIE NIE DZIAŁA Z RACJI HOSTINGU STRONY NA GITHUBIE I PUBLICZNEGO KODU ŻRÓDŁOWEGO):</p>
+                    <p style="color: lightgrey; text-align: center; text-align: justify; letter-spacing: 2px">Jeśli masz do mnie jakieś pytania, z miłą chęcią na nie odpowiem. Możesz się ze mną skontaktować drogą mailową, pisząć na adres: dev.olszewski@gmail.com bądź skorzystać z poniższego formularza kontaktowego:</p>
                 </div>
                 <br />
                 <br />
@@ -301,7 +306,7 @@
                                     <div class="form-group">
                                         <label for="telephone">Temat</label>
         
-                                        <input type="tel" class="form-control" id="subject" placeholder=" Podaj temat wiadomości" runat="server">
+                                        <input type="text" class="form-control" id="subject" placeholder=" Podaj temat wiadomości" runat="server">
                                           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Obowiązkowo musisz podać temat wiadomości" ForeColor="LightGray" ControlToValidate="subject"></asp:RequiredFieldValidator>
                                     </div>
 

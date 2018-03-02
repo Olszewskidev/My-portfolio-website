@@ -101,5 +101,65 @@ $("#Button2").click(function () {
 
     }
 });
+///on button mousei=over and mouseout function
+var toshow = $("#showup");
+var x = 0; var y = 0;
+var interval = null;
+var toshow = $("#showup");
+$("#gp2").mouseover(function () {
+    $("#table").hide();
+    toshow.css('background-image', 'url(/Images/googleplay.jpg)')
+    x = 0; y = 0;
+    interval
+    toshow.css('backgroundPosition', x + 'px' + ' ' + y + 'px');
+    interval = window.setInterval(function () {
+    toshow.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
+    y--;
+    }, 90);
+    toshow.fadeIn(500);
+}).mouseout(function () {
+     clearInterval(interval);
+     toshow.css("backgroundPosition", ' 0px 0px')
+     toshow.hide();
+     $("#table").fadeIn(250);
+});
+
+$("#git2").mouseover(function () {
+    $("#table").hide();
+    toshow.css('background-image', 'url(/Images/github.jpg)')
+    x = 0; y = 0;
+    toshow.css('backgroundPosition', x + 'px' + ' ' + y + 'px');
+    interval = window.setInterval(function () {
+        toshow.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
+        y--;
+    }, 90);
+    toshow.fadeIn(500);
+}).mouseout(function () {
+    clearInterval(interval);
+    toshow.css("backgroundPosition", ' 0px 0px')
+    toshow.hide();
+    $("#table").fadeIn(250);
+
+});
+
+$("#yt2").mouseover(function () {
+    $("#table").hide();
+    toshow.css('background-image', 'url(/Images/YTchannel.jpg)')
+    x = 0; y = 0;
+    toshow.css('backgroundPosition', x + 'px' + ' ' + y + 'px');
+    interval = window.setInterval(function () {
+        toshow.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
+        y--;
+    }, 90);
+    toshow.fadeIn(500);
+}).mouseout(function () {
+    clearInterval(interval);
+    toshow.css("backgroundPosition", ' 0px 0px')
+    toshow.hide();
+    $("#table").fadeIn(250);
+
+});
+ 
+
 
 
