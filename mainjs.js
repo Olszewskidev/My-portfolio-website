@@ -60,15 +60,15 @@ $("#Button2").click(function () {
         document.getElementById("name").style.border = "1px solid red";
     else
         document.getElementById("name").style.border = "none";
-    if (Name == '')
+    if (Email == '')
         document.getElementById("exampleInputEmail").style.border = "1px solid red";
     else
         document.getElementById("exampleInputEmail").style.border = "none";
-    if (Name == '')
+    if (Sub == '')
         document.getElementById("description").style.border = "1px solid red";
     else
         document.getElementById("description").style.border = "none";
-    if (Name == '')
+    if (Text == '')
         document.getElementById("subject").style.border = "1px solid red";
     else
         document.getElementById("subject").style.border = "none";
