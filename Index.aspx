@@ -27,11 +27,7 @@
          <div class="bg">
 
                 <nav class="navbar navbar-inverse navbar fixed-top" id="home">
-            <%--           <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" id="home">--%>
                     <div class="container-fluid">
-                      <%--  <div class="navbar-header">
-                            <a class="navbar-brand" href="#start">Kamil Olszewski</a>
-                        </div>--%>
                         <a class="navbar-brand" href="#about" style="font-size: 14px">O mnie</a>
                         <a class="navbar-brand" href="#projects" style="font-size: 14px">Moje projekty</a>
                         <a class="navbar-brand" href="#contact" style="font-size: 14px; ">Kontakt</a>   
