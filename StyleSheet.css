@@ -18,8 +18,8 @@ table,thead, th, td{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-      position: relative;
-      width:100%;
+    position: relative;
+    width:100%;
 }
 .bg2 {
     background-image: url('Images/tło2.png');
@@ -69,3 +69,4 @@ padding-top: 0px;
 {
     text-decoration:none;
 }
+
