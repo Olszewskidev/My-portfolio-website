@@ -86,7 +86,7 @@ $("#Button2").click(function () {
         $.ajax({
             type: 'POST',
             url: 'Index.aspx/ButtonClik',
-            data: "{ EmailName:'" + Name + "',EmailContact:'" + Email + "',EmailSub:'" + Sub + "',EmailText:'" + Text + "' }",
+            data: "{ EmailName:'" + Name.val() + "',EmailContact:'" + Email.val() + "',EmailSub:'" + Sub.val() + "',EmailText:'" + Text.val() + "' }",
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (data) {
