@@ -53,26 +53,31 @@ $(document).ready(function () {
 ///
 $("#Button2").click(function () {
     //function SendEmail() {
-    var Name = $("#name").val();
-    var Email = $("#exampleInputEmail").val();
-    var Sub = $("#subject").val();
-    var Text = $("#description").val();
-    if (Name == '')
-        document.getElementById("name").style.border = "1px solid red";
+    var Name = $("#name");
+    var Email = $("#exampleInputEmail");
+    var Sub = $("#subject");
+    var Text = $("#description");
+  
+    if (Name.val() == '')
+        Name.css('border', '1px solid red');
     else
-        document.getElementById("name").style.border = "none";
-    if (Name == '')
-        document.getElementById("exampleInputEmail").style.border = "1px solid red";
+         Name.css('border', 'none');
+  
+    if (Email.val() == '')
+        Email.css('border', '1px solid red');
     else
-        document.getElementById("exampleInputEmail").style.border = "none";
-    if (Name == '')
-        document.getElementById("description").style.border = "1px solid red";
+        Email.css('border', 'none');
+  
+    if (Sub.val() == '')
+        Sub.css('border', '1px solid red');
     else
-        document.getElementById("description").style.border = "none";
-    if (Name == '')
-        document.getElementById("subject").style.border = "1px solid red";
+        Sub.css('border', 'none');
+  
+    if (Text.val() == '')
+        Text.css('border', '1px solid red');
     else
-        document.getElementById("subject").style.border = "none";
+        Text.css('border', 'none');
+  
     if (typeof (Page_ClientValidate) == 'function') {
         Page_ClientValidate();
     }
@@ -86,19 +91,17 @@ $("#Button2").click(function () {
             dataType: 'json',
             success: function (data) {
                 sendgood = 'Wiadomość została wysłana :)';
-                $('#name').val("");
-                $('#exampleInputEmail').val("");
-                $('#description').val("");
-                $('#subject').val("");
-                document.getElementById("error").style.display = 'none';
-                document.getElementById("success").style.display = '';
-                
+                Name.val("");
+                Email.val("");
+                Text.val("");
+                Sub.val("");
+                $("#error").css('display','none');
+                $("#success").css('display','');             
             }
         });
     }
     else {
-       
-        document.getElementById("error").style.display = '';
+          $("#error").css('display','');
     }
 });
 ///on button mousei=over and mouseout function
